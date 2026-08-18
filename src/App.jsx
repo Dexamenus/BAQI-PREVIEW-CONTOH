@@ -42,7 +42,7 @@ export default function App() {
 
       {/* Card container — wider on desktop */}
       <div className="relative z-10 w-full md:max-w-lg md:my-10">
-        <div className="glass min-h-screen md:min-h-0 md:rounded-3xl overflow-hidden shadow-2xl shadow-black/60">
+        <div className="bg-[#0a0a0a] min-h-screen md:min-h-0 md:rounded-3xl overflow-hidden shadow-2xl shadow-black/60">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={view}
