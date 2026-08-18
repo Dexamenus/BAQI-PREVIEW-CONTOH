@@ -21,7 +21,7 @@ export default function Modal({ isOpen, onClose, title, children }) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-0 md:p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -35,11 +35,11 @@ export default function Modal({ isOpen, onClose, title, children }) {
 
           {/* Modal panel */}
           <motion.div
-            className="relative w-full md:max-w-lg glass rounded-t-3xl md:rounded-3xl overflow-hidden flex flex-col"
-            style={{ maxHeight: '95vh' }}
-            initial={{ y: 80, opacity: 0, scale: 0.96 }}
-            animate={{ y: 0, opacity: 1, scale: 1 }}
-            exit={{ y: 60, opacity: 0, scale: 0.96 }}
+            className="relative w-full md:max-w-lg glass rounded-3xl overflow-hidden flex flex-col mx-2"
+            style={{ maxHeight: '90vh' }}
+            initial={{ opacity: 0, scale: 0.93, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.93, y: 20 }}
             transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
           >
             {/* Header */}
